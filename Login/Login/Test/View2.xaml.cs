@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace Login
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for View2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class View2 : UserControl
     {
-        private  string username_admin = "admin";
-        private  string password_admin = "admin";
-        public MainWindow()
+        public View2()
         {
             InitializeComponent();
-            Main.Content = new Login_page();
-            
         }
-
-        
-
-       
     }
 }

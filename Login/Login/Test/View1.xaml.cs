@@ -12,25 +12,30 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Login.Test;
 
 namespace Login
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for View1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class View1 : UserControl
     {
-        private  string username_admin = "admin";
-        private  string password_admin = "admin";
-        public MainWindow()
+        private IInsertView iiInsertView;
+        public View1()
         {
             InitializeComponent();
-            Main.Content = new Login_page();
-            
+        }
+        public View1(IInsertView iiInsertView)
+        {
+            InitializeComponent();
+            this.iiInsertView = iiInsertView;
+
         }
 
-        
-
-       
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            iiInsertView.InsertView(new View2());
+        }
     }
 }

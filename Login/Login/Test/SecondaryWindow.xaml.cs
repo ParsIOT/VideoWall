@@ -10,27 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Login.Test;
 
 namespace Login
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SecondaryWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SecondaryWindow : Window, IInsertView
     {
-        private  string username_admin = "admin";
-        private  string password_admin = "admin";
-        public MainWindow()
+        public SecondaryWindow()
         {
             InitializeComponent();
-            Main.Content = new Login_page();
-            
+            Frame.Content = new View1(this);
         }
 
-        
-
-       
+        public void InsertView(UserControl view)
+        {
+            Frame.NavigationService.Navigate(view);
+        }
     }
 }
