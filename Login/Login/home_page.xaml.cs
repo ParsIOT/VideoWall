@@ -20,9 +20,25 @@ namespace Login
     /// </summary>
     public partial class home_page : UserControl
     {
+        private home_interface HOME;
         public home_page()
         {
             InitializeComponent();
+        }
+        public home_page(home_interface HOME)
+        {
+            InitializeComponent();
+            this.HOME = HOME;
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.HOME.show_changePass_view();
+        }
+
+        private void Logout_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.HOME.logout();
         }
     }
 }

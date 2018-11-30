@@ -53,9 +53,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="changePass_inteface.cs" />
     <Compile Include="changePass_page.xaml.cs">
       <DependentUpon>changePass_page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="home_interface.cs" />
     <Compile Include="home_page.xaml.cs">
       <DependentUpon>home_page.xaml</DependentUpon>
     </Compile>

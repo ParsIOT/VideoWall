@@ -64,7 +64,15 @@ namespace Login
 
         private void Submit_OnClick(object sender, RoutedEventArgs e)
         {
-            this.LOGIN.check_login(username.Text, password.Password);
+            if (this.LOGIN.check_login(username.Text, password.Password) == 1)
+            {
+                //logged in successfully
+            }
+            else
+            {
+                MessageBox.Show("رمز عبور یا نام کاربری اشتباه است");
+            }
+            
         }
     }
 }

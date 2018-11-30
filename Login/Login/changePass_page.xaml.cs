@@ -20,9 +20,42 @@ namespace Login
     /// </summary>
     public partial class changePass_page : UserControl
     {
+        private changePass_inteface CHANGEPASSWORD;
         public changePass_page()
         {
             InitializeComponent();
+        }
+        public changePass_page(changePass_inteface CHANGEPASSWORD)
+        {
+            InitializeComponent();
+            this.CHANGEPASSWORD = CHANGEPASSWORD;
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (newPass.Password == newPass_again.Password)
+            {
+                if (currentPass.Password == this.CHANGEPASSWORD.getPass())
+                {
+                    this.CHANGEPASSWORD.changePassword(newPass.Password);
+                    MessageBox.Show("changed successfuly.");
+                    this.CHANGEPASSWORD.return_home();
+                }
+                else
+                {
+                    MessageBox.Show("current password is incorrect.");
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("new password doesn't match.");
+            }
+        }
+
+        private void Back_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.CHANGEPASSWORD.return_home();
         }
     }
 }

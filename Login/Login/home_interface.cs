@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Login
 {
-    public interface login_inerface
+    public interface home_interface
     {
-        int check_login(string username, string password);
+        void show_changePass_view();
+        void logout();
     }
 }

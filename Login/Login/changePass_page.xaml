@@ -31,11 +31,14 @@
         </Grid.RowDefinitions>
 
         <Button  
+            x:Name="back"
             Grid.Row="0"
             Grid.Column="0"
             Content="برگشت"
             Background="White"
-            BorderBrush="White" />
+            BorderBrush="White" 
+            Click="Back_OnClick"
+            />
 
         <PasswordBox 
             x:Name="currentPass"
@@ -64,7 +67,9 @@
             Background="White"
             Width="200"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Center" />
+                HorizontalAlignment="Center" 
+            Click="ButtonBase_OnClick"
+            />
 
         <TextBlock
             Grid.Row="3"
