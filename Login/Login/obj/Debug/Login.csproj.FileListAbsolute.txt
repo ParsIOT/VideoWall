@@ -12,12 +12,14 @@ C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Login.csproj.Gener
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Login.exe
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Login.pdb
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Login_page.baml
-C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\signup_page.baml
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Login_page.g.cs
-C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\signup_page.g.cs
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Test\SecondaryWindow.baml
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Test\View1.baml
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Test\View2.baml
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Test\SecondaryWindow.g.cs
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Test\View1.g.cs
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\Test\View2.g.cs
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\changePass_page.baml
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\changePass_page.g.cs
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\home_page.baml
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\home_page.g.cs

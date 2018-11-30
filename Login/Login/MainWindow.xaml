@@ -7,6 +7,6 @@
         Width="550"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Frame x:Name="Main"/>
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

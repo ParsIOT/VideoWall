@@ -16,16 +16,21 @@ using System.Windows.Shapes;
 namespace Login
 {
     /// <summary>
-    /// Interaction logic for Login_page.xaml
+    /// Interaction logic for login_page.xaml
     /// </summary>
-    public partial class Login_page : Page
+    public partial class login_page : UserControl
     {
-        private  string username_admin = "admin";
-        private  string password_admin = "admin";
-        public Login_page()
+        private string username_admin = "admin";
+        private string password_admin = "admin";
+        private login_inerface LOGIN;
+        public login_page()
         {
             InitializeComponent();
-            this.NavigationService.Navigate(new Login_page());
+        }
+        public login_page(login_inerface LOGIN)
+        {
+            InitializeComponent();
+            this.LOGIN = LOGIN;
         }
 
         private string getPass()
@@ -50,7 +55,7 @@ namespace Login
             return 1;
         }
 
-        
+
 
         private void Close_OnClick(object sender, RoutedEventArgs e)
         {
@@ -59,11 +64,7 @@ namespace Login
 
         private void Submit_OnClick(object sender, RoutedEventArgs e)
         {
-            if (username.Text == getUsername() && password.Password == getPass())
-            {
-                MessageBox.Show("correct");
-            }
-            else MessageBox.Show("Incorrect !!!!");
+            this.LOGIN.check_login(username.Text, password.Password);
         }
     }
 }

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Login
 {
     /// <summary>
-    /// Interaction logic for signup_page.xaml
+    /// Interaction logic for home_page.xaml
     /// </summary>
-    public partial class signup_page : Page
+    public partial class home_page : UserControl
     {
-        public signup_page()
+        public home_page()
         {
             InitializeComponent();
         }

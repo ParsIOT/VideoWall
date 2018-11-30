@@ -18,19 +18,24 @@ namespace Login
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window,login_inerface
     {
         private  string username_admin = "admin";
         private  string password_admin = "admin";
         public MainWindow()
         {
             InitializeComponent();
-            Main.Content = new Login_page();
+            Main.Content = new login_page(this);
             
         }
-
-        
-
-       
+    
+public void check_login(string username, string password)
+{
+    //get username passwoerd from db
+    if (username == username_admin && password == password_admin)
+    {
+        Main.Content=new home_page();
     }
+}
+}
 }
