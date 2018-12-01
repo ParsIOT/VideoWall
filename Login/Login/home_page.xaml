@@ -26,6 +26,5 @@
                    HorizontalAlignment="Center"
                    FontSize="40" />
 
-       
     </Grid>
 </UserControl>
