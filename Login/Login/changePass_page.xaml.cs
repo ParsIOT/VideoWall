@@ -38,24 +38,62 @@ namespace Login
                 if (currentPass.Password == this.CHANGEPASSWORD.getPass())
                 {
                     this.CHANGEPASSWORD.changePassword(newPass.Password);
-                    MessageBox.Show("changed successfuly.");
+                    MessageBox.Show("رمز با موفقیت تغییر کرد");
                     this.CHANGEPASSWORD.return_home();
                 }
                 else
                 {
-                    MessageBox.Show("current password is incorrect.");
+                   this.incorrect.Text="رمز فعلی نادرست است";
+                    this.incorrect.Visibility = Visibility.Visible;
+                    this.currentPass.BorderBrush = Brushes.Red;
 
                 }
             }
             else
             {
-                MessageBox.Show("new password doesn't match.");
+                this.incorrect.Text = "تکرار رمز همخوانی ندارد";
+                this.incorrect.Visibility = Visibility.Visible;
+                this.newPass.BorderBrush = Brushes.Red;
+                this.newPass_again.BorderBrush = Brushes.Red;
+
             }
         }
 
         private void Back_OnClick(object sender, RoutedEventArgs e)
         {
             this.CHANGEPASSWORD.return_home();
+        }
+
+        private void CurrentPass_OnPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (this.currentPass.BorderBrush == Brushes.Red)
+            {
+                this.incorrect.Visibility = Visibility.Hidden;
+                this.currentPass.BorderBrush = Brushes.Black;
+            }
+           
+        }
+
+        private void NewPass_OnPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (this.newPass.BorderBrush == Brushes.Red)
+            {
+                this.incorrect.Visibility = Visibility.Hidden;
+                this.newPass.BorderBrush = Brushes.Black;
+                this.newPass_again.BorderBrush = Brushes.Black;
+
+            }
+        }
+
+        private void NewPass_again_OnPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (this.newPass.BorderBrush == Brushes.Red)
+            {
+                this.incorrect.Visibility = Visibility.Hidden;
+                this.newPass.BorderBrush = Brushes.Black;
+                this.newPass_again.BorderBrush = Brushes.Black;
+
+            }
         }
     }
 }

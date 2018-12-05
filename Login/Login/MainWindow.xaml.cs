@@ -1,4 +1,5 @@
 ﻿using System;
+using MahApps.Metro.Controls;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -13,13 +14,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro;
 
 namespace Login
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window,login_inerface,changePass_inteface,home_interface
+    public partial class MainWindow : MetroWindow, login_inerface, changePass_inteface, home_interface
     {
         private  string username_admin = "admin";
         private  string password_admin = "admin";
@@ -30,6 +32,8 @@ namespace Login
             Main.Content = new login_page(this);
             
         }
+
+        
         public string getPass()
         {
             return password_admin;

@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,20 +24,26 @@ namespace Login
         private string username_admin = "admin";
         private string password_admin = "admin";
         private login_inerface LOGIN;
+
         public login_page()
         {
             InitializeComponent();
+            DataContext = this;
         }
+
         public login_page(login_inerface LOGIN)
         {
             InitializeComponent();
             this.LOGIN = LOGIN;
+            DataContext = this;
         }
 
         private string getPass()
         {
             return password_admin;
+
         }
+
 
         private int setPass(string pass)
         {
@@ -70,9 +77,26 @@ namespace Login
             }
             else
             {
-                MessageBox.Show("رمز عبور یا نام کاربری اشتباه است");
+//                MessageBox.Show("رمز عبور یا نام کاربری اشتباه است");
+                incorrect.Visibility = Visibility.Visible;
+                password.BorderBrush =Brushes.Red ;
+                username.BorderBrush = Brushes.Red;
             }
-            
+
+        }
+
+        private void Password_OnPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            incorrect.Visibility = Visibility.Hidden;
+            password.BorderBrush = Brushes.Black;
+            username.BorderBrush = Brushes.Black;
+        }
+
+        private void Username_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            incorrect.Visibility = Visibility.Hidden;
+            password.BorderBrush = Brushes.Black;
+            username.BorderBrush = Brushes.Black;
         }
     }
 }

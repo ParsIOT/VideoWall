@@ -23,3 +23,10 @@ C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\changePass_page.ba
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\changePass_page.g.cs
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\home_page.baml
 C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\home_page.g.cs
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\bin\Debug\ControlzEx.dll
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\bin\Debug\MahApps.Metro.dll
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\bin\Debug\ControlzEx.pdb
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\bin\Debug\MahApps.Metro.pdb
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\bin\Debug\MahApps.Metro.xml
+C:\Users\Kayvan\Source\Repos\video-wall\Login\Login\obj\Debug\App.baml

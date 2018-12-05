@@ -3,92 +3,100 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             mc:Ignorable="d"
-             d:DesignHeight="300"
-             d:DesignWidth="300"
-             Width="550"
-             Height="400">
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                mc:Ignorable="d"
+             Width="300"
+             Height="350"
+             
+             >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="13*" />
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="3*" />
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+
+            <RowDefinition Height="1*" />
+
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
 
         </Grid.RowDefinitions>
 
-        <Button  
-            x:Name="back"
-            Grid.Row="0"
-            Grid.Column="0"
-            Content="برگشت"
-            Background="White"
-            BorderBrush="White" 
-            Click="Back_OnClick"
-            />
+        <Button x:Name="back"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Content="برگشت"
+                Background="White"
+                BorderBrush="White"
+                Click="Back_OnClick"
+                HorizontalAlignment="Left" />
 
-        <PasswordBox 
-            x:Name="currentPass"
-            Grid.Row="3"
-            Grid.Column="2"
-            Width="200"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center" />
+        <PasswordBox x:Name="currentPass"
+                     mah:TextBoxHelper.ClearTextButton="True"
+                     mah:TextBoxHelper.Watermark="رمز عبور جدید فعلی"
+                     Style="{StaticResource MetroButtonRevealedPasswordBox}"
+                     Margin="3"
+                     Grid.Row="3"
+                     Grid.Column="1"
+                     BorderThickness="2"
+PasswordChanged="CurrentPass_OnPasswordChanged"
+                     />
         <PasswordBox x:Name="newPass"
-            Grid.Row="4"
-            Grid.Column="2" 
-            Width="200"
-         VerticalAlignment="Center"
-         HorizontalAlignment="Center" />
+                     mah:TextBoxHelper.ClearTextButton="True"
+                     mah:TextBoxHelper.Watermark="تکرار رمز عبور فعلی"
+                     Style="{StaticResource MetroButtonRevealedPasswordBox}"
+                     Margin="3"
+                     Grid.Row="4"
+                     Grid.Column="1" 
+                     BorderThickness="2"
+                     PasswordChanged="NewPass_OnPasswordChanged"
+                     />
         <PasswordBox x:Name="newPass_again"
-             Grid.Row="5"
-                     Grid.Column="2"
-                     Width="200"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center" />
+                     mah:TextBoxHelper.ClearTextButton="True"
+                     mah:TextBoxHelper.Watermark="رمز عبور جدید"
+                     Style="{StaticResource MetroButtonRevealedPasswordBox}"
+                     Margin="3"
+                     BorderThickness="2"
+Grid.Row="5"
+                     Grid.Column="1" 
+                     PasswordChanged="NewPass_again_OnPasswordChanged"
+                     />
 
-        <Button
-            Grid.Row="6"
-            Grid.Column="2"
-            Content="ثبت تغییرات"
-            Background="White"
-            Width="200"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center" 
-            Click="ButtonBase_OnClick"
-            />
+        <Button Grid.Row="6"
+                Grid.Column="1"
+                Margin="3"
+                Content="ثبت تغییرات"
+                Click="ButtonBase_OnClick"
+                BorderThickness="2"
+Style="{DynamicResource AccentedSquareButtonStyle}"
+FontSize="9" />
 
-        <TextBlock
-            Grid.Row="3"
-            Grid.Column="1"
-            Text="رمز فعلی"
+        <TextBlock x:Name="incorrect"
+                   Text="رمز عبور یا نام کاربری اشتباه است"
+                   Grid.Row="7"
+                   Grid.Column="1"
+                   Foreground="#FFF01F1F"
+                   Visibility="Hidden"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
-        <TextBlock
-           Grid.Row="4"
-           Grid.Column="1"
-           Text="رمز جدید"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
-        <TextBlock 
-            Grid.Row="5"
-           Grid.Column="1"
-                   Text="تکرار رمز جدید"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
+                   FontSize="10"
+                   Height="16"
+                   Width="164" />
 
-    </Grid>
+</Grid>
 </UserControl>
